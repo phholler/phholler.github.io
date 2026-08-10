@@ -1,0 +1,159 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+
+name:
+  display: Philip Holler
+  given: Philip
+  family: Holler
+
+role: Doctoral Candidate
+
+bio: |
+  I am a doctoral candidate at the University of Mannheim and a researcher at
+  the Mannheim Institute for Sustainable Energy Studies (MISES). I combine
+  techno-economic analysis with carbon accounting to study the economics of
+  decarbonization technologies, emission allocation effects and the investment
+  incentives it shapes. I have held visiting positions at the Stanford
+  Graduate School of Business and the Toulouse School of Management. My
+  research has been published in Energy & Environmental Science, with further
+  work accepted at Nature Communications.
+
+affiliations:
+  - name: University of Mannheim
+    url: https://www.uni-mannheim.de/en/
+  - name: Mannheim Institute for Sustainable Energy Studies
+    url: https://www.uni-mannheim.de/en/mises/
+
+links:
+  - icon: at-symbol
+    url: mailto:philip.holler@uni-mannheim.de
+    label: E-mail
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/philip-holler-5ba191127/
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0002-6702-9807
+
+interests:
+  - Economics of decarbonization technologies
+  - Carbon accounting and investment incentives
+  - Carbon removal portfolios
+
+# Shown on the homepage (clean year ranges) and on the Experience page.
+education:
+  - degree: Doctoral Candidate
+    institution: University of Mannheim (GESS / CDSB)
+    year: '2021 – Present'
+    start: 2021-09-01
+  - degree: Visiting Doctoral Student
+    institution: Stanford University, Graduate School of Business
+    year: '01/2026 – 03/2026'
+    start: 2026-01-01
+    end: 2026-03-31
+  - degree: Visiting Doctoral Student
+    institution: Université Toulouse Capitole, Toulouse School of Management
+    year: '06/2024 – 08/2024'
+    start: 2024-06-01
+    end: 2024-08-31
+  - degree: M.Sc. Management
+    institution: University of Mannheim · Semester abroad at ESEADE Buenos Aires, Argentina (2019)
+    year: '2018 – 2021'
+    start: 2018-09-01
+    end: 2021-08-31
+  - degree: B.Sc. Business Administration
+    institution: University of Mannheim · Semester abroad at UQAM Montréal, Canada (2016)
+    year: '2014 – 2017'
+    start: 2014-09-01
+    end: 2017-08-31
+
+# Shown on the Experience page (resume-experience block). Dates display as
+# years only (date_format '2006' set in content/experience.md), so the month
+# component below is a placeholder and is not rendered.
+experience:
+  - role: Staff Researcher
+    org: Mannheim Institute for Sustainable Energy Studies
+    start: 2022-01-01
+    summary: |
+      Research on the economics of decarbonization technologies; teaching,
+      thesis supervision, and organizational activities.
+  - role: Co-Founder & CEO
+    org: YAB GmbH
+    start: 2021-01-01
+    end: 2025-12-31
+    summary: |
+      Built and led a SaaS platform for local sustainable consumption and
+      discovery.
+  - role: Project Consultant – Indirect Procurement
+    org: Hilti AG
+    start: 2020-09-01
+    end: 2020-12-31
+    summary: Digital service procurement and sustainable sourcing.
+  - role: Intern – Indirect Procurement
+    org: Hilti AG
+    start: 2019-06-01
+    end: 2019-08-31
+    summary: |
+      Implemented SAP Ariba as an e-procurement tool and supported sourcing
+      decisions.
+  - role: Intern – Transactions, Advisory
+    org: PricewaterhouseCoopers
+    start: 2016-06-01
+    end: 2016-08-31
+    summary: |
+      Bank valuation projects (peer groups, betas, and cost-of-capital
+      estimation).
+
+# Listed without proficiency ratings (the CV does not specify levels).
+skills:
+  - name: Programming & data analysis
+    items:
+      - label: Python (analytics, ML, modeling, optimization)
+      - label: R
+      - label: Stata
+      - label: MATLAB
+  - name: Energy & techno-economic modeling
+    items:
+      - label: SAM (System Advisor Model)
+      - label: GREET
+      - label: Velocity Suite
+  - name: Scientific writing & productivity
+    items:
+      - label: LaTeX
+      - label: MS Office
+
+languages:
+  - name: German
+    level: 5
+    label: Native
+  - name: English
+    level: 5
+    label: C2
+  - name: French
+    level: 5
+    label: C2
+  - name: Spanish
+    level: 4
+    label: C1
+
+# CV "Grants & Scholarships" (dates display as year only).
+awards:
+  - title: TRR Mobility Funding for PhD
+    awarder: TRR 266 Accounting for Transparency
+    date: 2025-01-01
+    icon: hero/trophy
+  - title: ENGAGE.EU Mobility Grant
+    awarder: ENGAGE.EU
+    date: 2024-01-01
+    icon: hero/trophy
+  - title: ENGAGE.EU Workshop Funding for Early-Stage Researchers
+    awarder: ENGAGE.EU
+    date: 2024-01-01
+    icon: hero/trophy
+  - title: IDEUM Scholarship for Internationalization of Doctoral Education
+    awarder: University of Mannheim
+    date: 2023-01-01
+    icon: hero/trophy
+  - title: PhD Scholarship (2021–2022)
+    awarder: Graduate School of Economic and Social Sciences (GESS)
+    date: 2021-01-01
+    icon: hero/trophy
