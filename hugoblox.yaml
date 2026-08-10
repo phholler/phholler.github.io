@@ -1,5 +1,8 @@
 build:
-  hugo_version: '0.162.0'
+  # 0.162.0 fails to build this site: the theme's build_links partial hits
+  # "SetInMap: assignment to entry in nil map" on pages with `links:` front
+  # matter. 0.163.x builds cleanly, so CI is pinned to match local development.
+  hugo_version: '0.163.3'
 deploy:
   # Deployment target: github-pages, netlify, vercel, cloudflare, or none
   host: 'github-pages'
