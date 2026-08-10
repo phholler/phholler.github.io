@@ -4,14 +4,15 @@ authors:
   - Gunther Glenk
   - me
   - Stefan Reichelstein
-date: "2026-06-01T00:00:00Z"
+date: "2026-08-10T00:00:00Z"
 
 publication_types: ["article-journal"]
 
 publication:
-  name: "Nature Communications (accepted)"
+  name: "Nature Communications"
 
 peer_reviewed: true
+open_access: true
 
 featured: true
 
@@ -25,6 +26,10 @@ tags:
 image:
   alt_text: "Modern energy plant with a tall exhaust stack, framed by trees."
 
+hugoblox:
+  ids:
+    doi: "10.1038/s41467-026-75473-z"
+
 links:
   - type: pdf
     url: "/uploads/pubs/carbon-accounting-hydrogen.pdf"
@@ -33,5 +38,3 @@ links:
     label: "Supplementary information"
     icon: "hero/document-text"
 ---
-
-<!-- Status: accepted at Nature Communications (2026). Add hugoblox.ids.doi and the exact publication date once the article is published. -->

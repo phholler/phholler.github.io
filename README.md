@@ -8,16 +8,32 @@ Sustainable Energy Studies (MISES).
 
 Built with [Hugo](https://gohugo.io/) and the
 [HugoBlox Academic CV](https://github.com/HugoBlox/hugo-theme-academic-cv)
-template. Deployed automatically to GitHub Pages via GitHub Actions on every
-push to `main`.
+template.
 
-Local development:
+## Deployment
+
+Deployment to GitHub Pages runs through the **“Deploy website to GitHub Pages”**
+workflow, which is triggered **manually** from the Actions tab
+(`workflow_dispatch`). The automatic push trigger is intentionally disabled, so
+pushing to `main` updates the source but does not republish the site until the
+workflow is run.
+
+## Local development
 
 ```bash
 pnpm install
-hugo server   # or: pnpm dev
+hugo server   # http://localhost:1313
 ```
 
-Site code: MIT (HugoBlox theme, © Lore Labs — see `LICENSE.md`).
-Site content, images, and paper PDFs: © Philip Holler and the respective
-publishers; all rights reserved.
+## Licensing and credits
+
+- **Site code / theme:** MIT — HugoBlox Academic CV, © Lore Labs (see `LICENSE.md`).
+- **Fonts:** Lora, Source Serif 4 and Source Code Pro (SIL Open Font License),
+  self-hosted from `assets/dist/font/` so that no visitor data is sent to
+  third-party font servers.
+- **Thumbnail images:** public domain / CC0, sourced via
+  [Openverse](https://openverse.org/).
+- **Papers:** the PDFs under `static/uploads/pubs/` are the authors' own
+  articles, redistributed under their open-access licences (CC BY); copyright
+  remains with the authors and the respective publishers.
+- **Site text, CV and photographs:** © Philip Holler. All rights reserved.
