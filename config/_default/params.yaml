@@ -90,9 +90,12 @@ hugoblox:
     align: center # left | center | right
     # Feature toggles
     search: true
+    # Light/dark switch (kept). The multi-theme picker dropdown is disabled:
+    # visitors get the site's own palette rather than a list of template themes.
     theme_toggle: true
-    theme_picker: true
-    language_switcher: true
+    theme_picker: false
+    # Single-language site, so no language switcher.
+    language_switcher: false
     # Call-to-action button
     cta:
       enable: false
@@ -106,7 +109,7 @@ hugoblox:
   footer:
     # Footer style variant
     style: minimal # minimal | columns | centered
-    language_switcher: true
+    language_switcher: false
     # Custom footer text (HTML supported)
     text: ""
 
