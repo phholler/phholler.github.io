@@ -1,13 +1,12 @@
 name: Deploy website to GitHub Pages
 
 on:
-  # Auto-deploy on push is PAUSED while the site is private / in local-preview mode.
-  # To go live later: (1) uncomment the `push` block below, (2) make the repo public,
-  # (3) enable Pages (Settings -> Pages -> Source: "GitHub Actions"). Until then this
-  # workflow runs only when triggered manually, so pushes won't email failed runs.
+  # Deployment is intentionally manual: run this workflow from the Actions tab
+  # ("Deploy website to GitHub Pages" -> "Run workflow") whenever the published
+  # site should be updated. Pushing to `main` updates the source only.
+  # To switch to automatic deployment on every push, uncomment the two lines below.
   # push:
   #   branches: ['main']
-  # Allows you to run this workflow manually from the Actions tab on GitHub
   workflow_dispatch:
 
 # Provide permission to clone the repo and deploy it to GitHub Pages
