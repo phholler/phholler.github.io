@@ -12,11 +12,10 @@ template.
 
 ## Deployment
 
-Deployment to GitHub Pages runs through the **“Deploy website to GitHub Pages”**
-workflow, which is triggered **manually** from the Actions tab
-(`workflow_dispatch`). The automatic push trigger is intentionally disabled, so
-pushing to `main` updates the source but does not republish the site until the
-workflow is run.
+Every push to `main` triggers the **“Deploy website to GitHub Pages”** workflow,
+which builds the site with Hugo and publishes it to GitHub Pages. The workflow
+can also be run manually from the Actions tab. If a build fails, the previously
+published site stays online.
 
 ## Local development
 

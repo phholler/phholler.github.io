@@ -1,12 +1,10 @@
 name: Deploy website to GitHub Pages
 
 on:
-  # Deployment is intentionally manual: run this workflow from the Actions tab
-  # ("Deploy website to GitHub Pages" -> "Run workflow") whenever the published
-  # site should be updated. Pushing to `main` updates the source only.
-  # To switch to automatic deployment on every push, uncomment the two lines below.
-  # push:
-  #   branches: ['main']
+  # Publish automatically on every push to `main`.
+  push:
+    branches: ['main']
+  # Also allows running the workflow manually from the Actions tab.
   workflow_dispatch:
 
 # Provide permission to clone the repo and deploy it to GitHub Pages
