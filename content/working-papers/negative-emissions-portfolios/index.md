@@ -3,7 +3,6 @@ title: "Dynamic Negative Emissions Portfolios under Paris-Aligned Removal Target
 authors:
   - me
   - Thimo Merke
-  - Stefan Reichelstein
 date: "2026-05-01T00:00:00Z"
 
 # Publication type (CSL standard): unpublished manuscript / working paper.
