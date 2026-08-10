@@ -1,7 +1,7 @@
 ---
 title: "LCOE Calculator — U.S. solar & wind"
 date: "2026-06-15T00:00:00Z"
-summary: "An interactive tool estimating the levelized cost of electricity for solar and wind across U.S. states."
+summary: "An interactive tool estimating the levelized cost of electricity for solar and wind across U.S. states and market segments."
 tags:
   - Levelized cost of electricity
   - Solar
@@ -16,7 +16,7 @@ links:
     label: "Open in a new tab"
 ---
 
-An interactive R/Shiny application that estimates the **levelized cost of electricity (LCOE)** for utility-scale **solar and wind across different U.S. states**. It combines modeled hourly capacity factors with technology cost assumptions to compare regional generation costs.
+An interactive web application, built with **Shiny for Python**, that estimates the **levelized cost of electricity (LCOE)** for **solar and wind across U.S. states**. Costs can be compared across the utility, commercial, and residential segments, and wind capacity factors can be derived from alternative reanalysis datasets (HRRR, ERA5, MERRA2). The tool combines modelled hourly capacity factors with technology cost assumptions to show how generation costs vary by location and market segment.
 
 A collaboration with Thimo Merke and Minghao Chen.
 
