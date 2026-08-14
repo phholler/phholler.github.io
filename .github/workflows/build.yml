@@ -132,7 +132,14 @@ jobs:
         HUGO_BLOX_LICENSE: ${{ secrets.HUGO_BLOX_LICENSE }}
       run: |
         echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
-        hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        # configure-pages reports http:// until "Enforce HTTPS" is switched on in
+        # Settings -> Pages. The domain has a valid certificate, so always build
+        # canonical URLs, og:url and the sitemap as https to avoid publishing
+        # insecure URLs.
+        BASE_URL="${{ steps.pages.outputs.base_url }}"
+        BASE_URL="https://${BASE_URL#http://}"
+        echo "Building with baseURL: ${BASE_URL}/"
+        hugo --minify --baseURL "${BASE_URL}/"
 
     - name: Generate Pagefind search index (if applicable)
       run: |
