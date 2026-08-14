@@ -4,7 +4,7 @@ Personal academic website of **Philip Holler**, doctoral candidate at the
 University of Mannheim and researcher at the Mannheim Institute for
 Sustainable Energy Studies (MISES).
 
-**Live site:** https://phholler.github.io/
+**Live site:** https://philipholler.com/
 
 Built with [Hugo](https://gohugo.io/) and the
 [HugoBlox Academic CV](https://github.com/HugoBlox/hugo-theme-academic-cv)
