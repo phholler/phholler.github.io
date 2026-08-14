@@ -137,7 +137,9 @@ jobs:
         # canonical URLs, og:url and the sitemap as https to avoid publishing
         # insecure URLs.
         BASE_URL="${{ steps.pages.outputs.base_url }}"
-        BASE_URL="https://${BASE_URL#http://}"
+        BASE_URL="${BASE_URL#http://}"
+        BASE_URL="${BASE_URL#https://}"
+        BASE_URL="https://${BASE_URL}"
         echo "Building with baseURL: ${BASE_URL}/"
         hugo --minify --baseURL "${BASE_URL}/"
 
