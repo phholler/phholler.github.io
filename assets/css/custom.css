@@ -52,6 +52,40 @@ html:root {
   }
 }
 
+/* Sub-page titles (Teaching, Conferences) -----------------------------------
+   These pages carry their title as a real <h1> inside a markdown block, which
+   inherits the theme's prose-xl scale and renders enormous (~3rem). Bring it
+   down to the size used by section titles elsewhere (Publications, Research)
+   and centre it to match; sub-headings and list text are scaled with it, and
+   the column width is aligned with the homepage research block. */
+#teaching .prose h1,
+#conferences .prose h1 {
+  font-size: 1.875rem;
+  line-height: 1.25;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+
+#teaching .prose h3,
+#conferences .prose h3 {
+  font-size: 1.25rem;
+}
+
+#teaching .prose p,
+#teaching .prose li,
+#conferences .prose p,
+#conferences .prose li {
+  font-size: 1.0625rem;
+}
+
+@media (min-width: 768px) {
+  #teaching .max-w-prose,
+  #conferences .max-w-prose {
+    max-width: 48rem;
+  }
+}
+
 /* Projects grid ------------------------------------------------------------
    The grid is two columns on desktop. While only one project exists, a lone
    card sits in the left half with dead space beside it, so centre it and stop

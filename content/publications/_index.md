@@ -4,12 +4,6 @@ type: landing
 cms_exclude: true
 
 sections:
-  - block: markdown
-    content:
-      text: |-
-        # Papers
-    design:
-      columns: '1'
   - block: collection
     id: publications
     content:

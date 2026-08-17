@@ -5,6 +5,7 @@ cms_exclude: true
 
 sections:
   - block: markdown
+    id: conferences
     content:
       text: |-
         # Conferences & Workshops
