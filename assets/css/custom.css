@@ -1,0 +1,67 @@
+/* ---------------------------------------------------------------------------
+   Site-specific layout adjustments.
+   Loaded after the theme stylesheet, so these rules win.
+   --------------------------------------------------------------------------- */
+
+/* Vertical rhythm ----------------------------------------------------------
+   The theme applies --hb-spacing-section above AND below every section, so the
+   gap between two sections is twice this value. 'comfortable' (4rem) still left
+   8rem between sections; 3.25rem gives a 6.5rem gap, which suits a text-dense
+   academic page without feeling cramped.
+
+   The theme re-declares this variable in an inline style block that appears
+   after this file, so `html:root` is used here to win on specificity rather
+   than on source order. */
+html:root {
+  --hb-spacing-section: 3.25rem;
+}
+
+@media (min-width: 1024px) {
+  html:root {
+    --hb-spacing-section: 3.75rem;
+  }
+}
+
+/* Biography block ----------------------------------------------------------
+   The theme ramps this block's own padding up to 8rem top and bottom on large
+   screens. Stacked on top of the section padding, that left a very large empty
+   band under the research-interest tags. Cap it, and keep the lower half
+   tighter than the upper half so the block sits closer to what follows it. */
+@media (min-width: 1024px) {
+  .resume-biography {
+    padding-top: 3.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .resume-biography {
+    padding-top: 4rem;
+    padding-bottom: 2.75rem;
+  }
+}
+
+/* Research section ---------------------------------------------------------
+   Markdown blocks are capped at ~65ch and centred. Between the full-width
+   biography above and the publication cards below, that reads as an isolated
+   narrow column. Widen it so the page keeps a single rhythm; the text stays
+   comfortably readable at this measure. */
+@media (min-width: 768px) {
+  #research .max-w-prose {
+    max-width: 48rem;
+  }
+}
+
+/* Projects grid ------------------------------------------------------------
+   The grid is two columns on desktop. While only one project exists, a lone
+   card sits in the left half with dead space beside it, so centre it and stop
+   it stretching. Once a second project is added this rule stops applying by
+   itself (:only-child no longer matches) and the normal two-column grid
+   returns — no change needed here. */
+@media (min-width: 768px) {
+  #project-list .grid > *:only-child {
+    grid-column: 1 / -1;
+    max-width: 34rem;
+    margin-inline: auto;
+  }
+}

@@ -72,7 +72,9 @@ hugoblox:
     # Border radius: 'none', 'sm', 'md', 'lg', or 'full'
     radius: "md"
     # Spacing density: 'compact', 'comfortable', or 'spacious'
-    spacing: "spacious"
+    # 'spacious' sets 6rem of padding above AND below every section (12rem of
+    # empty space between sections), which is too airy for this content.
+    spacing: "comfortable"
     # Avatar shape in author profiles
     avatar_shape: circle # circle | square | rounded
 

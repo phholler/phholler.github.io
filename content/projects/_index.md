@@ -12,6 +12,7 @@ sections:
     design:
       columns: '1'
   - block: collection
+    id: project-list
     content:
       title: ''
       text: 'Research tools and applied projects.'
