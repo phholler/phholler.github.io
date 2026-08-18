@@ -56,10 +56,11 @@ html:root {
    These pages carry their title as a real <h1> inside a markdown block, which
    inherits the theme's prose-xl scale and renders enormous (~3rem). Bring it
    down to the size used by section titles elsewhere (Publications, Research)
-   and centre it to match; sub-headings and list text are scaled with it, and
-   the column width is aligned with the homepage research block. */
-#teaching .prose h1,
-#conferences .prose h1 {
+   and centre it to match, for every landing page that carries its title this
+   way (Teaching, Conferences, Projects, CV). Sub-headings and list text are
+   scaled on the list-style pages, whose column width is aligned with the
+   homepage research block. */
+.hbb-section .prose h1 {
   font-size: 1.875rem;
   line-height: 1.25;
   text-align: center;

@@ -413,6 +413,46 @@
          beneath the avatar column. */}}
     <div class="profile-details mt-6 md:mt-10">
 
+        {{/* Interests Section */}}
+        {{ $interests_raw := $profile.interests }}
+        {{ $interests := slice }}
+        {{ if reflect.IsSlice $interests_raw }}
+          {{ $interests = $interests_raw }}
+        {{ else if eq (printf "%T" $interests_raw) "string" }}
+          {{ $interests = slice $interests_raw }}
+        {{ end }}
+        {{ if gt (len $interests) 0 }}
+        <div>
+          <div class="flex items-center justify-center gap-4 mb-8">
+            <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
+              {{ partial "functions/get_icon" (dict "name" "sparkles" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
+            </div>
+            {{ $interests_heading := i18n "interests" }}
+            {{ $interests_heading_raw := index $headings "interests" }}
+            {{ if eq (printf "%T" $interests_heading_raw) "string" }}
+              {{ $interests_heading_raw = strings.TrimSpace $interests_heading_raw }}
+              {{ if ne $interests_heading_raw "" }}
+                {{ $interests_heading = $interests_heading_raw }}
+              {{ end }}
+            {{ end }}
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white tracking-tight">{{ $interests_heading | markdownify }}</h3>
+          </div>
+          <div class="flex flex-wrap justify-center gap-3">
+            {{ range $interests }}
+            {{ $interest := strings.TrimSpace (printf "%v" .) }}
+            {{ if $interest }}
+            <span class="inline-block bg-primary-50 dark:bg-gray-800 text-primary-800 dark:text-primary-200 text-base font-medium px-4 py-2 rounded-full border border-primary-200/50 dark:border-primary-800/50
+                           hover:bg-primary-100 
+                           dark:hover:bg-primary-500 dark:hover:text-gray-900 dark:hover:border-primary-500
+                           transition-all duration-200 cursor-default">
+              {{ $interest | markdownify | emojify }}
+            </span>
+            {{ end }}
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+
         {{/* Education Section */}}
         {{ $education_raw := $profile.education }}
         {{ $education := slice }}
@@ -421,7 +461,7 @@
         {{ end }}
         {{ if gt (len $education) 0 }}
         <div class="mb-16">
-          <div class="flex items-center gap-4 mb-8">
+          <div class="flex items-center justify-center gap-4 mb-8">
             <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
               {{ partial "functions/get_icon" (dict "name" "academic-cap" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
             </div>
@@ -483,46 +523,6 @@
                 </div>
               </div>
             </div>
-            {{ end }}
-            {{ end }}
-          </div>
-        </div>
-        {{ end }}
-
-        {{/* Interests Section */}}
-        {{ $interests_raw := $profile.interests }}
-        {{ $interests := slice }}
-        {{ if reflect.IsSlice $interests_raw }}
-          {{ $interests = $interests_raw }}
-        {{ else if eq (printf "%T" $interests_raw) "string" }}
-          {{ $interests = slice $interests_raw }}
-        {{ end }}
-        {{ if gt (len $interests) 0 }}
-        <div>
-          <div class="flex items-center gap-4 mb-8">
-            <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
-              {{ partial "functions/get_icon" (dict "name" "sparkles" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
-            </div>
-            {{ $interests_heading := i18n "interests" }}
-            {{ $interests_heading_raw := index $headings "interests" }}
-            {{ if eq (printf "%T" $interests_heading_raw) "string" }}
-              {{ $interests_heading_raw = strings.TrimSpace $interests_heading_raw }}
-              {{ if ne $interests_heading_raw "" }}
-                {{ $interests_heading = $interests_heading_raw }}
-              {{ end }}
-            {{ end }}
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white tracking-tight">{{ $interests_heading | markdownify }}</h3>
-          </div>
-          <div class="flex flex-wrap gap-3">
-            {{ range $interests }}
-            {{ $interest := strings.TrimSpace (printf "%v" .) }}
-            {{ if $interest }}
-            <span class="inline-block bg-primary-50 dark:bg-gray-800 text-primary-800 dark:text-primary-200 text-base font-medium px-4 py-2 rounded-full border border-primary-200/50 dark:border-primary-800/50
-                           hover:bg-primary-100 
-                           dark:hover:bg-primary-500 dark:hover:text-gray-900 dark:hover:border-primary-500
-                           transition-all duration-200 cursor-default">
-              {{ $interest | markdownify | emojify }}
-            </span>
             {{ end }}
             {{ end }}
           </div>
