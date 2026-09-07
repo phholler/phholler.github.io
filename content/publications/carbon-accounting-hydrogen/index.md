@@ -37,4 +37,7 @@ links:
     url: "/uploads/pubs/carbon-accounting-hydrogen-si.pdf"
     label: "Supplementary information"
     icon: "hero/document-text"
+  - type: code
+    url: "https://github.com/phholler/Low-Carbon-Hydrogen-Model-Reproduction"
+    label: "Reproduction code"
 ---

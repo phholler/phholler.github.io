@@ -11,10 +11,11 @@ sections:
       text: |-
         # Projects
 
-        Tools I have built alongside my research and released publicly. Most are
+        Tools and code I have built alongside my research and released publicly:
         interactive calculators that make the underlying techno-economic models
-        available to others, so the assumptions behind the results can be
-        inspected and reused.
+        available to others, and the model code behind published papers. The aim
+        is the same in both cases — the assumptions behind the results should be
+        open to inspection, reproduction and reuse.
     design:
       columns: '1'
   - block: collection

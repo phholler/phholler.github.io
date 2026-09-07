@@ -82,7 +82,8 @@ html:root {
 
 @media (min-width: 768px) {
   #teaching .max-w-prose,
-  #conferences .max-w-prose {
+  #conferences .max-w-prose,
+  #projects-intro .max-w-prose {
     max-width: 48rem;
   }
 }

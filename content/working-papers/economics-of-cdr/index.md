@@ -1,9 +1,9 @@
 ---
-title: "The Economics of Emerging Carbon Dioxide Removal Technologies"
+title: "Cost Comparisons for Emerging Carbon Dioxide Removal Technologies"
 authors:
   - me
   - Stefan Reichelstein
-date: "2025-01-01T00:00:00Z"
+date: "2026-08-20T00:00:00Z"
 
 # Publication type (CSL standard): unpublished manuscript / working paper.
 publication_types: ["manuscript"]
