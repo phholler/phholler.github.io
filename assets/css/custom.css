@@ -101,3 +101,21 @@ html:root {
     margin-inline: auto;
   }
 }
+
+/* Paper abstracts ----------------------------------------------------------
+   Publication and working-paper pages lay their metadata out as a two-column
+   grid: a 200px label on the left, the value on the right. That suits the
+   short rows (Type, Publication, Status), but it squeezes the abstract into a
+   ~330px measure that reads badly. Drop the abstract's label and let the text
+   run the full width of the block; the remaining rows keep their labels.
+
+   The abstract is always this grid's first row: the theme emits it before the
+   other rows, and it renders the grid at all only when the page has an
+   abstract or is of type `publications`. */
+.md\:grid-cols-\[200px_auto\] > *:first-child {
+  display: none;
+}
+
+.md\:grid-cols-\[200px_auto\] > *:nth-child(2) {
+  grid-column: 1 / -1;
+}
