@@ -119,3 +119,12 @@ html:root {
 .md\:grid-cols-\[200px_auto\] > *:nth-child(2) {
   grid-column: 1 / -1;
 }
+
+/* The theme caps this block at max-w-prose (~65ch), which leaves it visibly
+   narrower than the featured image above it. The image is fitted to 720px wide
+   for this placement (`$featured.Fit "720x2500"`) inside a 760px article
+   container, so 720px lines the abstract up flush beneath the picture. Two
+   classes, to outrank .max-w-prose regardless of stylesheet order. */
+.max-w-prose.md\:grid-cols-\[200px_auto\] {
+  max-width: 720px;
+}

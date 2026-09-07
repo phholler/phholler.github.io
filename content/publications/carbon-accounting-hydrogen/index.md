@@ -10,6 +10,8 @@ publication_types: ["article-journal"]
 
 publication:
   name: "Nature Communications"
+  volume: 17
+  pages: "7260"
 
 peer_reviewed: true
 open_access: true
