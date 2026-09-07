@@ -31,6 +31,9 @@ links:
     label: E-mail
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/philip-holler-5ba191127/
+  # No `hl` parameter, so Scholar follows each visitor's own language setting.
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=5fcbBYYAAAAJ
   - icon: academicons/orcid
     url: https://orcid.org/0000-0002-6702-9807
 
