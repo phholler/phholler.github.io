@@ -18,13 +18,7 @@ links:
 
 The optimization model behind
 [*How Carbon Accounting Rules Shape Incentives for Hydrogen Production*](/publications/carbon-accounting-hydrogen/),
-released so that the published results can be reproduced and extended. Written
-in **Python** as Jupyter notebooks, it simulates and optimizes the operation and
-capacity choice of **Power-to-Gas** systems under alternative carbon accounting
-rules, with electricity prices, capacity factors, technology costs and policy
-support all exposed as inputs.
-
-Unlike the other entries here this is not an interactive calculator but the
-research code itself, for readers who want to verify the reported numbers or
-apply the model to a different setting. The paper is joint work with Gunther
-Glenk and Stefan Reichelstein.
+released for reproduction and extensions. Written in **Python** as Jupyter
+notebooks, it simulates and optimizes (via Gurobi) the operation and capacity
+choice of **Power-to-Gas** systems and renewables under alternative carbon
+accounting rules.
