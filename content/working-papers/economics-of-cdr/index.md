@@ -10,6 +10,7 @@ publication_types: ["manuscript"]
 
 publication:
   name: "Working paper"
+  publisher: "SSRN"
 
 peer_reviewed: false
 
@@ -23,4 +24,8 @@ tags:
 
 image:
   alt_text: "Aerial view of dense green forest surrounding a small clearing."
+
+hugoblox:
+  ids:
+    doi: "10.2139/ssrn.7427819"
 ---
